@@ -34,9 +34,9 @@ const obj2 = {
 
 ```
 A critical rule of immutable updates is that you must make a copy of every level of nesting that needs to be updated.
-# Redux expects that all state updates are done immutably.
-### Actions are object with type(string contant) and payload.
-### Reducers must make immutable updates.
+Redux expects that all state updates are done immutably.
+Actions are object with type(string contant) and payload.
+Reducers must make immutable updates.
 ### Reducers must not do any side effects??
 ### The store is created by passing in a reducer, and has a method called getState that returns the current state value.
 ### State is Read-Only. The only way to change the state is to dispatch an action
@@ -89,6 +89,7 @@ Remember, every time we call store.dispatch(action):
 
 The store calls rootReducer(state, action)
 - That root reducer may call other slice reducers inside of itself, like todosReducer(state.todos, action)
+
 The store saves the new state value inside
 The store calls all the listener subscription callbacks
 If a listener has access to the store, it can now call store.getState() to read the latest state value
